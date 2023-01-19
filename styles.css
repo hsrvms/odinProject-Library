@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #178a0c;
+  --black-color: #000300;
+  --gray-color: #e0e0e0;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--black-color);
+  color: var(--gray-color);
+}
