@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
-  <title>Odin Library</title>
-</head>
-<body>
-  
-  <div class="app">
-    <div class="app__header">
-      <div class="app__header-title">
-        <img src="./assets/logo.png" alt="logo"/>
-        <h1>Green Library</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Odin Library</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="app__header">
+        <img class="app__logo" src="./assets/logo.png" alt="logo" />
+        <h1 class="app__header-title">Green Library</h1>
+        
+      </div>
+
+      <div class="app__status">
+        <div class="app__status-info">
+          <p id="readBooks"></p>
+          <p id="notReadBooks"></p>
+          <p id="totalBooks"></p>
+        </div>
+      </div>
+
+      <div class="app__content" id="cardContainer"></div>
+
+      <button class="add-button" id="addButton"><img src="./assets/plus.svg" alt="add-plus"/></button>
+      <div class="app__popup hidden" id="addBookPopup">
+        <div class="app__popup-content">
+          <button class="cross-button" id="popupCrossButton"><img src="assets/cross.svg"></button>
+          <h1>Book Information</h1>
+          <label for="bookTitle" class="form-item">
+            Title:
+            <input type="text" id="bookTitle" placeholder="Title" required>
+          </label>
+          <label for="bookAuthor" class="form-item">
+            Author:
+            <input type="text" id="bookAuthor" placeholder="Author" required>
+          </label>
+          <label for="bookPages" class="form-item">
+            Pages:
+            <input type="number" id="bookPages" placeholder="How many pages does it have?" required>
+          </label>
+          <button class="app__popup-add-button" id="addBookButton">Add</button>
+        </div>
       </div>
     </div>
 
-    <div class="app__status">
-      <div class="app__status-info">
-        <p>Total Books: 123</p>
-        <p>Read: 120</p>
-        <p>Not Read: 3</p>
-      </div>
-    </div>
-
-    <div class="app__content">
-      <div class="app__content-card">
-        <h2>Title: Something</h2>
-        <h4>Author: Someone</h4>
-        <h4>Pages: 123</h4>
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider round"></span>
-        </label>
-      </div>
-    </div>
-  </div>
-
-  <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
